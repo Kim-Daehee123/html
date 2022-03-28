@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        text-align: center;
+      }
+      .tooltip {
+        position: relative;
+        display: inline-block;
+        border-bottom: 1px dotted black;
+      }
+      .tooltip .tooltiptext1 {
+        visibility: hidden;
+        width: 120px;
+        background-color: black;
+        color: bisque;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+
+        position: absolute;
+        z-index: 1;
+      }
+      .tooltip .tooltiptext2 {
+        visibility: hidden;
+        width: 120px;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+  
+  
+        position: absolute;
+        z-index: 1;
+        top: -5px;
+        left: 105%;
+    }
+    
+    .tooltip .tooltiptext3{
+        visibility: hidden;
+        width: 120px;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        position: absolute;
+        z-index: 1;
+        top: -5px;
+        right: 110%;
+    }
+    .tooltip .tooltiptext3::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 100%;
+        margin-top: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent transparent transparent black;
+    }
+
+      .tooltip:hover .tooltiptext1 {
+        visibility: visible;
+      }
+      .tooltip:hover .tooltiptext2 {
+        visibility: visible;
+      }
+      .tooltip:hover .tooltiptext3 {
+        visibility: visible;
+      }
+    </style>
+  </head>
+
+  <body style="text-align:center;">
+
+    <h2>Basic Tooltip</h2>
+    
+    <p>Move the mouse over the text below:</p>
+    
+    <div class="tooltip">Hover over me
+      <div class="tooltiptext1">Tooltip text1</div>
+    </div><br><br>
+
+    <div class="tooltip">Hover over me
+        <div class="tooltiptext2">Tooltip text2</div>  
+      </div><br><br>
+
+    <div class="tooltip">Hover over me
+        <div class="tooltiptext3">Tooltip text3</div>  
+    </div>
+</html>
