@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .body {
+        text-align: center;
+      }
+      #button1 {
+        width: 300px;
+        height: 50px;
+        font-size: 30px;
+      }
+      #loto {
+        margin: auto;
+        font-size: 30px;
+        border: 1px solid;
+        width: 300px;
+        height: 50px;
+        text-align: center;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      function clikLoto() {
+        let array = [];
+        function randomNum() {
+          return Math.floor(Math.random() * 100 + 1);
+        }
+        for (let i = 0; i < 7; i++) {
+          let lotoNum = randomNum();
+          if (!array.includes(lotoNum)) {
+            array.push(lotoNum);
+          } else {
+            i--;
+          }
+        }
+        let sortArray = array.sort((a, b) => a - b);
+        document.getElementById("loto").innerHTML = sortArray;
+      }
+    </script>
+    <div class="body">
+      <button id="button1" onclick="clikLoto()">Click</button>
+      <br /><br />
+      <div id="loto"></div>
+    </div>
+  </body>
+</html>
