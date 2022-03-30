@@ -27,25 +27,25 @@
   </head>
   <body>
     <script>
+      //1~100 랜덤숫자
+      function randomNum() {
+        return Math.floor(Math.random() * 100 + 1);
+      }
+      //로또번호 7개 뽑기
       function clikLoto() {
         let array = [];
-        function randomNum() {
-          return Math.floor(Math.random() * 100 + 1);
-        }
-        for (let i = 0; i < 7; i++) {
+        while (array.length < 7) {
           let lotoNum = randomNum();
           if (!array.includes(lotoNum)) {
             array.push(lotoNum);
-          } else {
-            i--;
           }
         }
-        let sortArray = array.sort((a, b) => a - b);
-        document.getElementById("loto").innerHTML = sortArray;
+        array.sort((a, b) => a - b);
+        document.getElementById("loto").innerHTML = array;
       }
     </script>
     <div class="body">
-      <button id="button1" onclick="clikLoto()">Click</button>
+      <button id="button1" onclick="clikLoto()">로또번호</button>
       <br /><br />
       <div id="loto"></div>
     </div>
