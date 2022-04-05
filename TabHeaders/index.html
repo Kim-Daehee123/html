@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: "Lato", sans-serif;
+      }
+
+      .tablink {
+        background-color: #555;
+        color: white;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        font-size: 17px;
+        width: 25%;
+      }
+
+      .tablink:hover {
+        background-color: #777;
+      }
+
+      /* 탭 콘텐츠 스타일 지정 */
+      .tabcontent {
+        color: white;
+        display: none;
+        padding: 50px;
+        text-align: center;
+      }
+
+      #London {
+        background-color: darkred;
+      }
+      #Paris {
+        background-color: darkgreen;
+      }
+      #Tokyo {
+        background-color: darkblue;
+      }
+      #Oslo {
+        background-color: darkorange;
+      }
+    </style>
+  </head>
+  <body>
+    <p>탭 메뉴 내부의 버튼을 클릭합니다.</p>
+
+    <div id="London" class="tabcontent">
+      <h1>London</h1>
+      <p>London is the capital city of England.</p>
+    </div>
+
+    <div id="Paris" class="tabcontent">
+      <h1>Paris</h1>
+      <p>Paris is the capital of France.</p>
+    </div>
+
+    <div id="Tokyo" class="tabcontent">
+      <h1>Tokyo</h1>
+      <p>Tokyo is the capital of Japan.</p>
+    </div>
+
+    <div id="Oslo" class="tabcontent">
+      <h1>Oslo</h1>
+      <p>Oslo is the capital of Norway.</p>
+    </div>
+
+    <button
+      class="tablink"
+      onclick="openCity('London', this, 'darkred')"
+      id="defaultOpen"
+    >
+      London
+    </button>
+
+    <button class="tablink" onclick="openCity('Paris', this, 'darkgreen')">
+      Paris
+    </button>
+
+    <button class="tablink" onclick="openCity('Tokyo', this, 'darkblue')">
+      Tokyo
+    </button>
+
+    <button class="tablink" onclick="openCity('Oslo', this, 'darkorange')">
+      Oslo
+    </button>
+
+    <script>
+      function openCity(cityName, elmnt, color) {
+        let i, tabcontent, tablink;
+        //tabcontent 클래스 이름의 엘리먼트 요소를 가진 tabcontent 변수 선언
+        tabcontent = document.getElementsByClassName("tabcontent");
+
+        //모든 tabcontent 클래스의 스타일의 display를 none으로 바꿈
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+
+        //tablink 클래스 이름의 엘리먼트 요소를 가진 tablink 변수 선언
+        tablinks = document.getElementsByClassName("tablink");
+
+        //모든 tablink 클래스의 스타일을 backgroundColor 공백으로 바꿈
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].style.backgroundColor = "";
+        }
+
+        //cityName에 해당하는 id 태그 스타일의 display를 block으로 바꿈
+        document.getElementById(cityName).style.display = "block";
+        //클릭한 태그 요소의 backgroundColor를 파라미터로 받은 color로 바꿈
+        elmnt.style.backgroundColor = color;
+      }
+      // id = "defaultOpen"인 요소를 가져 와서 클릭하십시오.
+      document.getElementById("defaultOpen").click();
+    </script>
+  </body>
+</html>
