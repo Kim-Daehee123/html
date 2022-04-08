@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: "Lato", sans-serif;
+        height: 100%;
+        margin: 0;
+      }
+
+      .tablink {
+        background-color: #555;
+        color: white;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        font-size: 17px;
+        width: 25%;
+      }
+
+      .tablink:hover {
+        background-color: #777;
+      }
+
+      /* 탭 콘텐츠 스타일 지정 */
+      .tabcontent1 {
+        color: white;
+        display: none;
+        padding: 50px;
+        text-align: center;
+      }
+
+      .tabcontent2 {
+        /* display: flex; */
+        color: white;
+        display: none;
+        padding: 100px 20px;
+        height: 100vh;
+      }
+
+      #London {
+        background-color: darkred;
+      }
+      #Paris {
+        background-color: darkgreen;
+      }
+      #Tokyo {
+        background-color: darkblue;
+      }
+      #Oslo {
+        background-color: darkorange;
+      }
+
+      #Home {
+        background-color: darkgreen;
+      }
+      #News {
+        background-color: darkblue;
+      }
+      #Contact {
+        background-color: darkorange;
+      }
+      #About {
+        background-color: darkred;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="London" class="tabcontent1">
+      <h1>London</h1>
+      <p>London is the capital city of England.</p>
+    </div>
+
+    <div id="Paris" class="tabcontent1">
+      <h1>Paris</h1>
+      <p>Paris is the capital of France.</p>
+    </div>
+
+    <div id="Tokyo" class="tabcontent1">
+      <h1>Tokyo</h1>
+      <p>Tokyo is the capital of Japan.</p>
+    </div>
+
+    <div id="Oslo" class="tabcontent1">
+      <h1>Oslo</h1>
+      <p>Oslo is the capital of Norway.</p>
+    </div>
+
+    <button
+      class="tablink"
+      onclick="openCity('London','Home', this, 'darkred')"
+      id="defaultOpen"
+    >
+      London
+    </button>
+
+    <button
+      class="tablink"
+      onclick="openCity('Paris','News', this, 'darkgreen')"
+    >
+      Paris
+    </button>
+
+    <button
+      class="tablink"
+      onclick="openCity('Tokyo','Contact', this, 'darkblue')"
+    >
+      Tokyo
+    </button>
+
+    <button
+      class="tablink"
+      onclick="openCity('Oslo','About', this, 'darkorange')"
+    >
+      Oslo
+    </button>
+
+    <div id="Home" class="tabcontent2">
+      <h3>Home</h3>
+      <p>Home is where the heart is..</p>
+    </div>
+
+    <div id="News" class="tabcontent2">
+      <h3>News</h3>
+      <p>Some news this fine day!</p>
+    </div>
+
+    <div id="Contact" class="tabcontent2">
+      <h3>Contact</h3>
+      <p>Get in touch, or swing by for a cup of coffee.</p>
+    </div>
+
+    <div id="About" class="tabcontent2">
+      <h3>About</h3>
+      <p>Who we are and what we do.</p>
+    </div>
+    <script>
+      function openCity(cityName, pageName, elmnt, color) {
+        let i, tabcontent1, tabcontent2, tablink;
+        //tabcontent 클래스 이름의 엘리먼트 요소를 가진 tabcontent 변수 선언
+        tabcontent1 = document.getElementsByClassName("tabcontent1");
+        tabcontent2 = document.getElementsByClassName("tabcontent2");
+
+        //모든 tabcontent 클래스의 스타일의 display를 none으로 바꿈
+        for (i = 0; i < tabcontent1.length; i++) {
+          tabcontent1[i].style.display = "none";
+        }
+        for (i = 0; i < tabcontent2.length; i++) {
+          tabcontent2[i].style.display = "none";
+        }
+
+        //tablink 클래스 이름의 엘리먼트 요소를 가진 tablink 변수 선언
+        tablinks = document.getElementsByClassName("tablink");
+
+        //모든 tablink 클래스의 스타일을 backgroundColor 공백으로 바꿈
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].style.backgroundColor = "";
+        }
+
+        //cityName에 해당하는 id 태그 스타일의 display를 block으로 바꿈
+        document.getElementById(cityName).style.display = "block";
+        document.getElementById(pageName).style.display = "block";
+        //클릭한 태그 요소의 backgroundColor를 파라미터로 받은 color로 바꿈
+        elmnt.style.backgroundColor = color;
+      }
+      document.getElementById("defaultOpen").click();
+    </script>
+  </body>
+</html>
