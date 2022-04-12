@@ -5,18 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
     <style>
+      @font-face {
+        font-family: abster;
+        src: url(webSiteExample/font/abster-webfont.woff) format("woff");
+      }
       * {
         margin: 0;
         padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+          url(/webSiteExample/images/room.jpg);
       }
       h1 {
         margin-left: -25px;
         padding-bottom: 20px;
       }
       .nav {
-        margin-top: 10%;
-        margin-left: 10%;
+        width: 80%;
+        height: 80px;
+        margin: 0 auto;
+      }
+      .nav h1 a {
+        text-decoration: none;
+        color: white;
+        font-family: abster;
+      }
+      .nav ol {
+        color: white;
       }
       .li {
         font-size: 20px;
@@ -24,7 +45,7 @@
       }
       .li a {
         text-decoration-line: none;
-        color: black;
+        color: white;
       }
       .li a:hover {
         color: #1fdfdf;
@@ -32,46 +53,74 @@
     </style>
   </head>
   <body>
-    <nav class="nav">
-      <h1>html 실습</h1>
-      <ol>
-        <li class="li">
-          <a href="tooltip/index.html" target="_blink">tooltip</a>
-        </li>
-        <li class="li">
-          <a href="lotto/index.html" target="_blink">lotto</a>
-        </li>
-        <li class="li">
-          <a href="landingPage/index.html" target="_blink">landingPage</a>
-        </li>
-        <li class="li">
-          <a href="tabs/index.html" target="_blink">tabs</a>
-        </li>
-        <li class="li">
-          <a href="verticalTabs/index.html" target="_blink">verticalTabs</a>
-        </li>
-        <li class="li">
-          <a href="TabHeaders/index.html" target="_blink">TabHeaders</a>
-        </li>
-        <li class="li">
-          <a href="menuUnderline/index.html" target="_blink">menuUnderline</a>
-        </li>
-        <li class="li">
-          <a href="3DFlipButton/index.html" target="_blink">3DFlipButton</a>
-        </li>
-        <li class="li">
-          <a href="keyframes/index.html" target="_blink">keyframes</a>
-        </li>
-        <li class="li">
-          <a href="FullPageTabs/index.html" target="_blink">FullPageTabs</a>
-        </li>
-        <li class="li">
-          <a href="webSiteExample/index.html" target="_blink">webSiteExample</a>
-        </li>
-        <li class="li">
-          <a href="cardUI/index.html" target="_blink">cardUI</a>
-        </li>
-      </ol>
-    </nav>
+    <div class="container">
+      <div class="nav">
+        <h1><a href="#">H T M L 실습</a></h1>
+        <ol>
+          <li class="li">
+            <a href="interactive/index.html" target="_blink"
+              >interactive(2022-03-25)</a
+            >
+          </li>
+          <li class="li">
+            <a href="tooltip/index.html" target="_blink">tooltip(2022-03-28)</a>
+          </li>
+          <li class="li">
+            <a href="lotto/index.html" target="_blink">lotto(2022-03-29)</a>
+          </li>
+          <li class="li">
+            <a href="snowGhost/index.html" target="_blink"
+              >snowGhost(2022-03-29)</a
+            >
+          </li>
+          <li class="li">
+            <a href="landingPage/index.html" target="_blink"
+              >landingPage(2022-03-30)</a
+            >
+          </li>
+          <li class="li">
+            <a href="tabs/index.html" target="_blink">tabs(2022-03-31)</a>
+          </li>
+          <li class="li">
+            <a href="verticalTabs/index.html" target="_blink"
+              >verticalTabs(2022-04-01)</a
+            >
+          </li>
+          <li class="li">
+            <a href="3DFlipButton/index.html" target="_blink"
+              >3DFlipButton(2022-04-04)</a
+            >
+          </li>
+          <li class="li">
+            <a href="TabHeaders/index.html" target="_blink"
+              >TabHeaders(2022-04-05)</a
+            >
+          </li>
+          <li class="li">
+            <a href="menuUnderline/index.html" target="_blink"
+              >menuUnderline(2022-04-06)</a
+            >
+          </li>
+          <li class="li">
+            <a href="keyframes/index.html" target="_blink"
+              >keyframes(2022-04-07)</a
+            >
+          </li>
+          <li class="li">
+            <a href="FullPageTabs/index.html" target="_blink"
+              >FullPageTabs(2022-04-08)</a
+            >
+          </li>
+          <li class="li">
+            <a href="webSiteExample/index.html" target="_blink"
+              >webSiteExample(2022-04-08)</a
+            >
+          </li>
+          <li class="li">
+            <a href="cardUI/index.html" target="_blink">cardUI(2022-04-11)</a>
+          </li>
+        </ol>
+      </div>
+    </div>
   </body>
 </html>
