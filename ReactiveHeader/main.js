@@ -7,12 +7,10 @@ toggleBtn.addEventListener("click", () => {
   icons.classList.toggle("active");
 });
 
-window.addEventListener("resize", () => {
-  let innerWidth = this.window.innerWidth;
-
-  console.log(innerWidth);
+window.onresize = () => {
+  let innerWidth = window.innerWidth;
   if (innerWidth > 768) {
     menu.classList.remove("active");
     icons.classList.remove("active");
   }
-});
+};
