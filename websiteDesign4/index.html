@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="header" id="header">
+      <nav>
+        <img src="images/logo.png" class="logo" />
+        <ul>
+          <li><a href="#" id="models">Model S</a></li>
+          <li><a href="#" id="model3">Model 3</a></li>
+          <li><a href="#" id="modelx">Model X</a></li>
+          <li><a href="#" id="modely">Model Y</a></li>
+        </ul>
+        <a href="#" class="btn">Reserve Now</a>
+      </nav>
+      <div class="info">
+        <div>
+          <h2 id="s">1.9 s</h2>
+          <p>60 mph</p>
+        </div>
+        <div>
+          <h2 id="mph">200 mph</h2>
+          <p>Top Speed</p>
+        </div>
+        <div>
+          <h2 id="mi">396 mi</h2>
+          <p>Max Range</p>
+        </div>
+        <div class="line"></div>
+        <div>
+          <h2 id="model">Model S</h2>
+        </div>
+      </div>
+    </div>
+    <script>
+      let header = document.getElementById("header");
+      let ms = document.getElementById("models");
+      let m3 = document.getElementById("model3");
+      let mx = document.getElementById("modelx");
+      let my = document.getElementById("modely");
+      let model = document.getElementById("model");
+      let s = document.getElementById("s");
+      let mph = document.getElementById("mph");
+      let mi = document.getElementById("mi");
+
+      ms.onclick = function () {
+        header.style.backgroundImage = "url(images/image-1.png)";
+        model.innerHTML = "Model S";
+        s.innerHTML = "1.9 s";
+        mph.innerHTML = "200 mph";
+        mi.innerHTML = "396 mi";
+      };
+      m3.onclick = function () {
+        header.style.backgroundImage = "url(images/image-2.png)";
+        model.innerHTML = "Model 3";
+        s.innerHTML = "2.9 s";
+        mph.innerHTML = "300 mph";
+        mi.innerHTML = "496 mi";
+      };
+      mx.onclick = function () {
+        header.style.backgroundImage = "url(images/image-3.png)";
+        model.innerHTML = "Model X";
+        s.innerHTML = "3.9 s";
+        mph.innerHTML = "400 mph";
+        mi.innerHTML = "596 mi";
+      };
+      my.onclick = function () {
+        header.style.backgroundImage = "url(images/image-4.png)";
+        model.innerHTML = "Model Y";
+        s.innerHTML = "4.9 s";
+        mph.innerHTML = "500 mph";
+        mi.innerHTML = "696 mi";
+      };
+    </script>
+  </body>
+</html>
