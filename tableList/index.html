@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #textarea {
+        font-size: 20px;
+      }
+
+      .table-test {
+        width: 100%;
+        justify-content: space-between;
+      }
+      table,
+      th,
+      td {
+        padding: 5px;
+        border: 1px solid gray;
+        border-collapse: collapse;
+      }
+      table td a {
+        color: black;
+        text-decoration: none;
+      }
+      table td a:hover {
+        color: pink;
+      }
+      #td1,
+      #td3 {
+        text-align: center;
+      }
+      #td2 {
+        padding-left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="h1-text"></h1>
+    <h3 id="h3-body"></h3>
+    <textarea name="" id="textarea" cols="100" rows="5"></textarea><br /><br />
+    <div id="text-board"></div>
+
+    <h1>게시판(TABLE로 FOR문 돌리면 게시판)</h1>
+    <table class="table-test">
+      <tr>
+        <th>No</th>
+        <th>제목(title)</th>
+        <th>작성자</th>
+      </tr>
+
+      <tbody id="table1"></tbody>
+    </table>
+    <script src="main.js"></script>
+  </body>
+</html>
